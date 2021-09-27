@@ -11,14 +11,7 @@
 |
 */
 
-use App\Comuna;
-use App\Region;
 
-Route::get('/regiones', function () {
-    $regiones = Region::all();
-    return view('welcome', compact('regiones'));
-});
-Route::get('/comunas', function (){
-    $comunas = Comuna::all()->sort();
-    return view('welcome2', compact('comunas'));
-});
+Route::get('/','HomeController@home');
+Route::get('/login','HomeController@login');
+Route::get('/usuario/create','UsuarioController@create');

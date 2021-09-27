@@ -13,4 +13,8 @@ class Comuna extends Model
     public function region(){
         return $this->belongsTo('App\Region', 'region_idregion');
     }
+
+    public function viviendas(){
+        return $this->hasMany('App\Comuna', 'comuna_idcomuna');
+    }
 }
